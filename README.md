@@ -1,2 +1,4 @@
 # hotstar-clone
-Created with CodeSandbox
+Landing page of Disney Hotstar created with CodeSandbox 
+
+Tech Stack used: HTML, CSS & Vanilla Javascript
