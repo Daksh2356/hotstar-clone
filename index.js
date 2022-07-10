@@ -1,30 +1,35 @@
 let movies = [
   {
     name: "falcon and the winter soldier",
+    genre:"Marvel · Superhero · Action · Science Fiction",
     des:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro et veniam excepturi, eaque voluptatem impedit nulla laboriosam facilis ut laboriosam libero!",
     image: "images/slider2.png"
   },
   {
     name: "loki",
+    genre:"Marvel · Superhero · Action ",
     des:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro et veniam excepturi, eaque voluptatem impedit nulla laboriosam facilis ut laboriosam libero!",
     image: "images/slider1.png"
   },
   {
     name: "wanda vision",
+    genre:"Marvel · English · Superhero · Action · Science Fiction",
     des:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro et veniam excepturi, eaque voluptatem impedit nulla laboriosam facilis ut laboriosam libero!",
     image: "images/slider3.png"
   },
   {
     name: "raya and the last dragon",
+    genre:"Animation · Fantasy · Adventure · Kids",
     des:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro et veniam excepturi, eaque voluptatem impedit nulla laboriosam facilis ut laboriosam libero!",
     image: "images/slider4.png"
   },
   {
     name: "luca",
+    genre:"Animation · Fantasy · Adventure · Kids",
     des:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro et veniam excepturi, eaque voluptatem impedit nulla laboriosam facilis ut laboriosam libero!",
     image: "images/slider5.png"
@@ -46,13 +51,16 @@ const createSlide = () => {
   var imgElement = document.createElement("img");
   let content = document.createElement("div");
   let h1 = document.createElement("h1");
+  let genre = document.createElement("p");
   let p = document.createElement("p");
 
   // attaching all elements
   imgElement.appendChild(document.createTextNode(""));
   h1.appendChild(document.createTextNode(movies[slideIndex].name));
   p.appendChild(document.createTextNode(movies[slideIndex].des));
+  genre.appendChild(document.createTextNode(movies[slideIndex].genre));
   content.appendChild(h1);
+  content.appendChild(genre);
   content.appendChild(p);
   slide.appendChild(content);
   slide.appendChild(imgElement);
@@ -66,6 +74,7 @@ const createSlide = () => {
   slide.className = "slider";
   content.className = "slide-content";
   h1.className = "movie-title";
+  genre.className = "movie-gen"
   p.className = "movie-des";
 
   sliders.push(slide);
